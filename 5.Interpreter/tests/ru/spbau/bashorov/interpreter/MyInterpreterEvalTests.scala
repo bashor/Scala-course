@@ -135,4 +135,14 @@ class MyInterpreterEvalTests extends FunSuite {
     }
   }
 
+  test("left is simple and right is expression ") {
+    val interpreter = new MyInterpreter()
+    interpreter.eval("val abcd = 5")
+    val variable = interpreter.context.get("abcd")
+    assert(variable.isDefined)
+    variable.get should equal (ContextValue(5))
+
+    interpreter.eval("34+abcd") should equal(AstInt(34 + 5))
+  }
+
 }

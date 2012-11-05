@@ -84,8 +84,8 @@ class MyInterpreter extends Parser {
 
   private def binOpWithExpr(expr: AstNode, op: String, other: AstNode, curContext: => mutable.Map[String, ContextElement]): AstNode = {
     eval(expr, mutable.Map() ++= curContext) match {
-      case v@AstInt(_) => eval(AstBinOp(v, op, other), curContext)
-      case v@AstDouble(_) => eval(AstBinOp(v, op, other), curContext)
+      case v@AstInt(_) => eval(AstBinOp(other, op, v), curContext)
+      case v@AstDouble(_) => eval(AstBinOp(other, op, v), curContext)
       case _ => throw new RuntimeException("Unknown binOp") //todo
     }
   }
@@ -105,8 +105,9 @@ class MyInterpreter extends Parser {
     case AstBinOp(AstDouble(left), op, AstDouble(right)) => binOp(left, op, right, AstDouble)
     case AstBinOp(AstInt(left), op, AstDouble(right)) => binOp(left, op, right, AstDouble)
     case AstBinOp(AstDouble(left), op, AstInt(right)) => binOp(left, op, right, AstDouble)
+    case AstBinOp(left @ AstInt(_), op, expr) => eval(AstBinOp(expr, op, left), curContext)
+    case AstBinOp(left @ AstDouble(_), op, expr) => eval(AstBinOp(expr, op, left), curContext)
     case AstBinOp(expr, op, right) => binOpWithExpr(expr, op, right, curContext)
-    case AstBinOp(left, op, expr) => binOpWithExpr(expr, op, left, curContext)
 
     case AstUnOp(op, AstInt(value)) => AstInt(unOp(op, value))
     case AstUnOp(op, AstDouble(value)) => AstDouble(unOp(op, value))
