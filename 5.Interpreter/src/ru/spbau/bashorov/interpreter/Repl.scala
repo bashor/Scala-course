@@ -9,7 +9,7 @@ object Repl {
           println("bedabeda")
           return
         }
-        case ":exit"  => {
+        case ":exit" => {
           println("goodbye")
           return
         }

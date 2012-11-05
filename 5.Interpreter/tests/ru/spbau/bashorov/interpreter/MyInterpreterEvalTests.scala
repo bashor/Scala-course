@@ -17,15 +17,15 @@ class MyInterpreterEvalTests extends FunSuite {
   }
 
   test("Double - Int") {
-    new MyInterpreter().eval("5.2-2") should equal (new AstDouble(5.2-2))
+    new MyInterpreter().eval("5.2-2") should equal (new AstDouble(5.2 - 2))
   }
 
   test("Int * Double") {
-    new MyInterpreter().eval("5*78.7") should equal (new AstDouble(5*78.7))
+    new MyInterpreter().eval("5*78.7") should equal (new AstDouble(5 * 78.7))
   }
 
   test("Double / Double") {
-    new MyInterpreter().eval("66.6/6.6") should equal (new AstDouble(66.6/6.6))
+    new MyInterpreter().eval("66.6/6.6") should equal (new AstDouble(66.6 / 6.6))
   }
 
   test("Unary minus") {
@@ -93,7 +93,7 @@ class MyInterpreterEvalTests extends FunSuite {
     interpreter.eval("asd = 10+99.9")
 
     assert(interpreter.context.contains("asd"))
-    interpreter.eval("asd") should equal(AstDouble(10+99.9))
+    interpreter.eval("asd") should equal (AstDouble(10 + 99.9))
   }
 
   test("Double assign to variable") {
