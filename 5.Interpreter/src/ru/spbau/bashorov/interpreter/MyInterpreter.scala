@@ -40,7 +40,7 @@ class MyInterpreter extends Parser {
 
   def Identifier = rule { IdentifierStr ~> AstIdentifier}
 
-  def Assignment = rule { Identifier ~ "=" ~ Expression ~~> ((id: AstIdentifier, value: AstNode) => AstAssignment(id, value)) }
+  def Assignment = rule { Identifier ~ " = " ~ Expression ~~> ((id: AstIdentifier, value: AstNode) => AstAssignment(id, value)) }
   def FunCall = rule { Identifier ~ "(" ~ zeroOrMore(Expression, separator = ", " ) ~ ")" ~~> ((funName: AstIdentifier, params: List[AstNode]) => AstCall(funName, params)) }
   def CommaOp = rule (Expression ~ ", " ~ Expression ~~> ((f: AstNode, s:AstNode) => AstComma(f, s)))
 
@@ -109,11 +109,28 @@ class MyInterpreter extends Parser {
       case AstDouble(value) => AstDouble(unOp(op, value))
       case newExpr => AstUnOp(op, newExpr)
     }
-//    case AstAssignment(id, value) =>
+    case ret @ AstAssignment(id, expr) => {
+      if (!curContext.contains(id.name))
+        throw new RuntimeException(s"Identifier ${id.name} not found")
+
+      if (!curContext.get(id.name).get.isInstanceOf[ContextVariable[_]])
+        throw new RuntimeException(s"Identifier ${id.name} not found")
+
+      eval(expr, mutable.Map() ++= curContext) match {
+        case AstInt(value) => curContext.put(id.name, ContextValue(value))
+        case AstDouble(value) => curContext.put(id.name, ContextValue(value))
+        case _ => throw new RuntimeException("Unexpected AstNode") //todo
+      }
+
+      ret
+    }
 //    case AstCall(funName, params) =>
 //    case AstComma(first, second) =>
 //    case AstFunction(name, body) =>
     case ret @ AstValue(id, expr) => {
+      if (curContext.contains(id.name))
+        throw new RuntimeException(s"Identifier ${id.name} already exists")
+
       eval(expr, mutable.Map() ++= curContext) match {
         case AstInt(value) => curContext.put(id.name, ContextValue(value))
         case AstDouble(value) => curContext.put(id.name, ContextValue(value))
@@ -122,6 +139,9 @@ class MyInterpreter extends Parser {
       ret
     }
     case ret @ AstVariable(id, expr) => {
+      if (curContext.contains(id.name))
+        throw new RuntimeException(s"Identifier ${id.name} already exists")
+
       eval(expr, mutable.Map() ++= curContext) match {
         case AstInt(value) => curContext.put(id.name, ContextVariable(value))
         case AstDouble(value) => curContext.put(id.name, ContextVariable(value))

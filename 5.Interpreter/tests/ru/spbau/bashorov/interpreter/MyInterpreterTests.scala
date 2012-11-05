@@ -94,4 +94,59 @@ class MyInterpreterTests extends FunSuite {
 
     interpreter.eval("abcd+34") should equal(AstInt(9 + 435 + 34))
   }
+
+  test("Double create value") {
+    val interpreter = new MyInterpreter()
+    interpreter.eval("val asd = 99.999")
+
+    intercept[RuntimeException] {
+      interpreter.eval("val asd = 10")
+    }
+
+    assert(interpreter.context.contains("asd"))
+    interpreter.eval("asd") should equal(AstDouble(99.999))
+  }
+
+  test("Double create variable") {
+    val interpreter = new MyInterpreter()
+    interpreter.eval("var asd = 99.999")
+
+    intercept[RuntimeException] {
+      interpreter.eval("var asd = 10.222")
+    }
+
+    assert(interpreter.context.contains("asd"))
+    interpreter.eval("asd") should equal(AstDouble(99.999))
+  }
+
+  test("Assign to variable") {
+    val interpreter = new MyInterpreter()
+    interpreter.eval("var asd = 99.999")
+
+    interpreter.eval("asd = 10+99.9")
+
+    assert(interpreter.context.contains("asd"))
+    interpreter.eval("asd") should equal(AstDouble(10+99.9))
+  }
+
+  test("Assign to nonvariable") {
+    val interpreter = new MyInterpreter()
+    interpreter.eval("val asd = 99.999")
+
+    intercept[RuntimeException] {
+      interpreter.eval("asd = 10+99.9")
+    }
+
+    assert(interpreter.context.contains("asd"))
+    interpreter.eval("asd") should equal(AstDouble(99.999))
+  }
+
+  test("Assign to nonexistent") {
+    val interpreter = new MyInterpreter()
+
+    intercept[RuntimeException] {
+      interpreter.eval("asd = 10+99.9")
+    }
+  }
+
 }
