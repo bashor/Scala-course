@@ -14,6 +14,6 @@ case class AstCall(funName: AstIdentifier, params: List[AstNode]) extends AstNod
 case class AstComma(first: AstNode, second: AstNode) extends AstNode
 
 
-case class AstFunction(name: AstIdentifier, body: AstNode) extends AstNode
+case class AstFunction(name: AstIdentifier, params: List[AstIdentifier], body: AstNode) extends AstNode
 case class AstValue(name: AstIdentifier, expr: AstNode) extends AstNode
 case class AstVariable(name: AstIdentifier, expr: AstNode) extends AstNode

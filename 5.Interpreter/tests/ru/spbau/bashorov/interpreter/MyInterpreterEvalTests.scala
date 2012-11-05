@@ -14,33 +14,7 @@ import ru.spbau.bashorov.interpreter.AstIdentifier
 import ru.spbau.bashorov.interpreter.ContextVariable
 
 @RunWith(classOf[JUnitRunner])
-class MyInterpreterTests extends FunSuite {
-  test("Simple ast tree") {
-    new MyInterpreter().parse("1+2") should equal (AstBinOp(new AstInt(1), "+", new AstInt(2)))
-  }
-
-  test("Simple ast tree with doubles") {
-    new MyInterpreter().parse("7.0-2.2") should equal (AstBinOp(new AstDouble(7.0), "-", new AstDouble(2.2)))
-  }
-
-  test("Mixed number") {
-    new MyInterpreter().parse("433*2.2") should equal (AstBinOp(new AstInt(433), "*", new AstDouble(2.2)))
-  }
-
-  test("Error handling") {
-    intercept[ParsingException] {
-      new MyInterpreter().parse("1++")
-    }
-  }
-
-  test("Parse Value") {
-    new MyInterpreter().parse("val a = 7") should equal (AstValue(AstIdentifier("a"), new AstInt(7)))
-  }
-
-  test("BinOp with identifier") {
-    new MyInterpreter().parse("abcd+27") should equal (AstBinOp(AstIdentifier("abcd"), "+", new AstInt(27)))
-  }
-
+class MyInterpreterEvalTests extends FunSuite {
   test("Int + Int") {
     new MyInterpreter().eval("123+234") should equal (new AstInt(123+234))
   }
@@ -127,6 +101,18 @@ class MyInterpreterTests extends FunSuite {
 
     assert(interpreter.context.contains("asd"))
     interpreter.eval("asd") should equal(AstDouble(10+99.9))
+  }
+
+  test("Double assign to variable") {
+    val interpreter = new MyInterpreter()
+    interpreter.eval("var asd = 99.999")
+
+    interpreter.eval("asd = 10+99.9")
+
+    interpreter.eval("asd = 0.9")
+
+    assert(interpreter.context.contains("asd"))
+    interpreter.eval("asd") should equal(AstDouble(0.9))
   }
 
   test("Assign to nonvariable") {
