@@ -5,13 +5,6 @@ import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
 import org.scalatest.matchers.ShouldMatchers._
 
-import org.parboiled.errors.ParsingException
-import ru.spbau.bashorov.interpreter.AstBinOp
-import ru.spbau.bashorov.interpreter.AstValue
-import ru.spbau.bashorov.interpreter.AstDouble
-import ru.spbau.bashorov.interpreter.AstInt
-import ru.spbau.bashorov.interpreter.AstIdentifier
-import ru.spbau.bashorov.interpreter.ContextVariable
 
 @RunWith(classOf[JUnitRunner])
 class MyInterpreterEvalTests extends FunSuite {
