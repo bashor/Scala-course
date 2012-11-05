@@ -2,10 +2,9 @@ package ru.spbau.bashorov.interpreter
 
 sealed abstract class AstNode
 
-//abstract case class AstNumber() extends AstNode
-case class AstInt(val value: Int) extends AstNode
+case class AstInt(value: Int) extends AstNode
 
-case class AstDouble(val value: Double) extends AstNode
+case class AstDouble(value: Double) extends AstNode
 
 case class AstIdentifier(name: String) extends AstNode
 

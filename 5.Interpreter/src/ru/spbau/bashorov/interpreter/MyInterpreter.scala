@@ -71,7 +71,7 @@ class MyInterpreter extends Parser {
   def unOp[T: Numeric](op: String, value: T) : T = op match {
     case "+" => value
     case "-" => implicitly[Numeric[T]].negate(value)
-    case _ => throw new RuntimeException("Unknown unOp") //todo
+    case _ => throw new RuntimeException(s"Unknown unOp: $op")
   }
 
   private def binOp[T: Numeric](left: T, op: String, right: T, mapper: (T) => AstNode): AstNode = op match {
@@ -79,14 +79,14 @@ class MyInterpreter extends Parser {
     case "-" => mapper(implicitly[Numeric[T]].minus(left, right))
     case "*" => mapper(implicitly[Numeric[T]].times(left, right))
     case "/" => new AstDouble(implicitly[Numeric[T]].toDouble(left) / implicitly[Numeric[T]].toDouble(right))
-    case _ => throw new RuntimeException("Unknown binOp") //todo
+    case _ => throw new RuntimeException(s"Unknown binOp: $op")
   }
 
   private def binOpWithExpr(expr: AstNode, op: String, other: AstNode, curContext: => mutable.Map[String, ContextElement]): AstNode = {
     eval(expr, mutable.Map() ++= curContext) match {
       case v@AstInt(_) => eval(AstBinOp(other, op, v), curContext)
       case v@AstDouble(_) => eval(AstBinOp(other, op, v), curContext)
-      case _ => throw new RuntimeException("Unknown binOp") //todo
+      case _ => throw new RuntimeException("Bad expression")
     }
   }
 
@@ -97,8 +97,8 @@ class MyInterpreter extends Parser {
     case AstIdentifier(name) => curContext.get(name).orNull match {
       case ContextValue(value) => if (value.isInstanceOf[Int]) AstInt(value.asInstanceOf[Int]) else AstDouble(value.asInstanceOf[Double])
       case ContextVariable(value) => if (value.isInstanceOf[Int]) AstInt(value.asInstanceOf[Int]) else AstDouble(value.asInstanceOf[Double])
-      case ContextFunction(_, _) => throw new RuntimeException(s"Can not use Function name($name) as value") //todo
-      case _ => throw new RuntimeException("Unknown identefier") //todo
+      case ContextFunction(_, _) => throw new RuntimeException(s"Can not use Function name($name) as value")
+      case _ => throw new RuntimeException("Unknown identefier")
     }
 
     case AstBinOp(AstInt(left), op, AstInt(right)) => binOp(left, op, right, AstInt)
@@ -126,7 +126,7 @@ class MyInterpreter extends Parser {
       eval(expr, mutable.Map() ++= curContext) match {
         case AstInt(value) => curContext.put(id.name, ContextVariable(value))
         case AstDouble(value) => curContext.put(id.name, ContextVariable(value))
-        case _ => throw new RuntimeException("Unexpected AstNode") //todo
+        case _ => throw new RuntimeException("Bad expression")
       }
 
       ret
@@ -148,7 +148,7 @@ class MyInterpreter extends Parser {
       eval(expr, mutable.Map() ++= curContext) match {
         case AstInt(value) => curContext.put(id.name, ContextValue(value))
         case AstDouble(value) => curContext.put(id.name, ContextValue(value))
-        case _ => throw new RuntimeException("Unexpected AstNode") //todo
+        case _ => throw new RuntimeException("Bad expression")
       }
       ret
     }
@@ -159,7 +159,7 @@ class MyInterpreter extends Parser {
       eval(expr, mutable.Map() ++= curContext) match {
         case AstInt(value) => curContext.put(id.name, ContextVariable(value))
         case AstDouble(value) => curContext.put(id.name, ContextVariable(value))
-        case _ => throw new RuntimeException("Unexpected AstNode") //todo
+        case _ => throw new RuntimeException("Bad expression")
       }
       ret
     }
