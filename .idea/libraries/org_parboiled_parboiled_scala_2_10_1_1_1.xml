@@ -1,6 +1,5 @@
 <component name="libraryTable">
-  <library name="org.parboiled:parboiled-scala_2.10:1.1.1" type="repository">
-    <properties maven-id="org.parboiled:parboiled-scala_2.10:1.1.1" />
+  <library name="org.parboiled:parboiled-scala_2.10:1.1.1">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/parboiled-scala_2.10-1.1.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/parboiled-core-1.1.1.jar!/" />

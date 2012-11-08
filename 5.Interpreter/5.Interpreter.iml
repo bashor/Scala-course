@@ -18,8 +18,11 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Scala-course" />
     <orderEntry type="library" name="org.parboiled:parboiled-scala_2.10:1.1.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="junit-4.10" level="project" />
-    <orderEntry type="library" scope="TEST" name="scalatest_2.10.0-M7" level="project" />
+    <orderEntry type="library" name="junit:4.10-src-javadoc" level="project" />
+    <orderEntry type="library" name="junit-4.10" level="project" />
+    <orderEntry type="library" name="scala-compiler" level="project" />
+    <orderEntry type="library" name="scala-library" level="project" />
+    <orderEntry type="library" name="scalatest_2.10.0-M7" level="project" />
   </component>
 </module>
 
