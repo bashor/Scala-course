@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyInterpreter.scala" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyInterpreter.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterEvalTests.scala" afterPath="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterEvalTests.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterParseTests.scala" afterPath="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterParseTests.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Scala-course.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="/Dummy.txt" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352424130852" ignored="false" />
+    <file path="/AstNodes.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352423988634" ignored="false" />
     <file path="/MyInterpreter.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352423627514" ignored="false" />
     <file path="/a.dummy" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352423106488" ignored="false" />
     <file path="/MyInterpreterEvalTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352422400661" ignored="false" />
     <file path="/MyInterpreterParseTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352418850923" ignored="false" />
     <file path="/fragment.java" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352417914393" ignored="false" />
     <file path="/Repl.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352412920598" ignored="false" />
-    <file path="/AstNodes.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352411323487" ignored="false" />
-    <file path="/Dummy.txt" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352410026566" ignored="false" />
     <file path="/Scala Console" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352045382414" ignored="false" />
     <file path="/Grammar.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352045700531" ignored="false" />
     <file path="/ssss.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352092791925" ignored="false" />
@@ -116,7 +112,7 @@
       <file leaf-file-name="AstNodes.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="60" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
+            <state line="18" column="60" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -519,7 +515,11 @@
       <created>1352410033602</created>
       <updated>1352410033602</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add ignore whitespaces&#10;fix comma separated expressions&#10;processing big numbers&#10;">
+      <created>1352424143618</created>
+      <updated>1352424143618</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -562,7 +562,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20178571" sideWeight="0.6460733" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3539267" sideWeight="0.4904762" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3539267" sideWeight="0.4904762" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -606,7 +606,7 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="add other libraries" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ignore whitespaces&#10;fix comma separated expressions&#10;processing big numbers&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -627,6 +627,7 @@
     <MESSAGE value="Reformat" />
     <MESSAGE value="drop unnecessary code&#10;fix messages" />
     <MESSAGE value="add other libraries" />
+    <MESSAGE value="add ignore whitespaces&#10;fix comma separated expressions&#10;processing big numbers&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -738,7 +739,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="60" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
+        <state line="18" column="60" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

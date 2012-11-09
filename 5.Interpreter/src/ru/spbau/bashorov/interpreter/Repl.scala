@@ -18,7 +18,12 @@ object Repl {
         }
         case input => {
           try {
-            println(myInterpreter.eval(input))
+            val result = myInterpreter.eval(input)
+            result match {
+              case AstInt(value) => println(value)
+              case AstDouble(value) => println(value)
+              case _ => println(result)
+            }
           } catch {
             case e: RuntimeException => System.err.println(e.getMessage)
           }
