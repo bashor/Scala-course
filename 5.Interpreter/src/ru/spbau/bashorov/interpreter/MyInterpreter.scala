@@ -9,8 +9,13 @@ class MyInterpreter extends Parser {
   def Digits = rule { oneOrMore(Digit) }
   def DoubleStr = rule { Digits ~ "." ~ Digits }
 
-  def IntNum = rule { Digits ~> (s => new AstInt(s.toInt))}
-  def DoubleNum = rule { DoubleStr ~> ((s: String) => new AstDouble(s.toDouble))}
+  def IntNum = rule { WhiteSpace ~ (optional("-") ~ Digits) ~> (s => new AstInt(
+      try {
+        s.toInt
+      } catch {
+        case e: NumberFormatException => throw new RuntimeException(s"Too big number $s")
+      })) ~ WhiteSpace }
+  def DoubleNum = rule { WhiteSpace ~ (optional("-") ~ DoubleStr) ~> ((s: String) => new AstDouble(s.toDouble)) ~ WhiteSpace }
 
   def Number = DoubleNum | IntNum
 
@@ -32,31 +37,31 @@ class MyInterpreter extends Parser {
     "+" ~ Expression ~~> ((expr: AstNode) => AstUnOp("+", expr).asInstanceOf[AstNode])
   }
 
-  def Factor: Rule1[AstNode] = rule { Identifier | Number | UnOp | Parens}
+  def Factor: Rule1[AstNode] = rule { WhiteSpace ~ (Identifier | Number | UnOp | Parens) ~ WhiteSpace}
   def Parens = rule { "(" ~ Expression ~ ")" }
 
 
-  def IdentifierFirst = rule { "a"-"z" | "A" - "Z" | "_" }
-  def IdentifierStr = rule { IdentifierFirst ~ zeroOrMore(IdentifierFirst | Digits)}
+  def IdentifierStart = rule { "a"-"z" | "A" - "Z" | "_" }
+  def Identifier = rule { WhiteSpace ~ (IdentifierStart ~ zeroOrMore(IdentifierStart | Digits)) ~> AstIdentifier ~ WhiteSpace}
 
-  def Identifier = rule { IdentifierStr ~> AstIdentifier}
-
-  def Assignment = rule { Identifier ~ " = " ~ Expression ~~> ((id: AstIdentifier, value: AstNode) => AstAssignment(id, value)) }
-  def FunCall = rule { Identifier ~ "(" ~ zeroOrMore(Identifier, separator = ", ") ~ ")" ~~>
+  def Assignment = rule { Identifier ~ "=" ~ Expression ~~> ((id: AstIdentifier, value: AstNode) => AstAssignment(id, value)) }
+  def FunCall = rule { Identifier ~ "(" ~ zeroOrMore(Expression, separator = ", ") ~ ")" ~~>
     ((funName: AstIdentifier, params: List[AstNode]) => AstCall(funName, params)) }
-  def CommaOp = rule (Expression ~ ", " ~ Expression ~~> ((f: AstNode, s:AstNode) => AstComma(f, s)))
+  def CommaSeparated: Rule1[AstNode] = rule { Operations ~ "," ~ oneOrMore(Operations, separator = ",") ~~>
+    ((first: AstNode, other: List[AstNode]) => AstComma(first :: other)) }
 
-  def Value = rule { "val " ~ Identifier ~ " = " ~ Expression ~~> ((name: AstIdentifier, expr: AstNode) => AstValue(name, expr))}
-  def Variable = rule { "var " ~ Identifier ~ " = " ~ Expression ~~> ((name: AstIdentifier, expr: AstNode) => AstVariable(name, expr)) }
+  def Value = rule { "val" ~ Identifier ~ "=" ~ Expression ~~> ((name: AstIdentifier, expr: AstNode) => AstValue(name, expr))}
+  def Variable = rule { "var" ~ Identifier ~ "=" ~ Expression ~~> ((name: AstIdentifier, expr: AstNode) => AstVariable(name, expr)) }
 
   class SignatureHolder(val name: AstIdentifier, val params: List[AstIdentifier])
-  def FunSignature = rule { Identifier ~ "(" ~ zeroOrMore(Identifier, separator = ", ") ~ ")" ~~>
-    ((name: AstIdentifier, params: List[AstIdentifier]) => new SignatureHolder(name, params))}
-  def Function = rule { "def " ~ FunSignature ~ " = " ~ Expression ~~> ((fun: SignatureHolder, expr: AstNode) => AstFunction(fun.name, fun.params, expr)) }
+  def FunSignature = rule { Identifier ~ "(" ~ zeroOrMore(Identifier, separator = ",") ~ ")" ~~>
+    ((name: AstIdentifier, params: List[AstIdentifier]) => new SignatureHolder(name, params)) ~ WhiteSpace }
+  def Function = rule { "def" ~ FunSignature ~ "=" ~ (Expression | CommaSeparated) ~~> ((fun: SignatureHolder, expr: AstNode) => AstFunction(fun.name, fun.params, expr)) }
 
   def WhiteSpace: Rule0 = rule { zeroOrMore(anyOf(" \n\r\t\f")) }
 
-  def Grammar = (Value | Variable | Function | Assignment | FunCall | CommaOp | Expression) ~ EOI
+  def Operations = WhiteSpace ~ (Value | Variable | Function | Assignment | FunCall | Expression) ~ WhiteSpace
+  def Grammar = (CommaSeparated | Operations) ~ EOI
 
   def parse(expression: String) : AstNode = {
     val parsingResult = ReportingParseRunner(Grammar).run(expression)
@@ -98,7 +103,7 @@ class MyInterpreter extends Parser {
       case ContextValue(value) => if (value.isInstanceOf[Int]) AstInt(value.asInstanceOf[Int]) else AstDouble(value.asInstanceOf[Double])
       case ContextVariable(value) => if (value.isInstanceOf[Int]) AstInt(value.asInstanceOf[Int]) else AstDouble(value.asInstanceOf[Double])
       case ContextFunction(_, _) => throw new RuntimeException(s"Can not use Function name($name) as value")
-      case _ => throw new RuntimeException("Unknown identefier")
+      case _ => throw new RuntimeException(s"Unknown identefier $name")
     }
 
     case AstBinOp(AstInt(left), op, AstInt(right)) => binOp(left, op, right, AstInt)
@@ -111,7 +116,7 @@ class MyInterpreter extends Parser {
 
     case AstUnOp(op, AstInt(value)) => AstInt(unOp(op, value))
     case AstUnOp(op, AstDouble(value)) => AstDouble(unOp(op, value))
-    case AstUnOp(op, expr) => eval(expr, mutable.Map() ++= curContext) match {
+    case AstUnOp(op, expr) => eval(expr, curContext.clone()) match {
       case AstInt(value) => AstInt(unOp(op, value))
       case AstDouble(value) => AstDouble(unOp(op, value))
       case newExpr => AstUnOp(op, newExpr)
@@ -123,7 +128,7 @@ class MyInterpreter extends Parser {
       if (!curContext.get(id.name).get.isInstanceOf[ContextVariable[_]])
         throw new RuntimeException(s"Identifier ${id.name} is not variable")
 
-      eval(expr, mutable.Map() ++= curContext) match {
+      eval(expr, curContext.clone()) match {
         case AstInt(value) => curContext.put(id.name, ContextVariable(value))
         case AstDouble(value) => curContext.put(id.name, ContextVariable(value))
         case _ => throw new RuntimeException("Bad expression")
@@ -131,8 +136,38 @@ class MyInterpreter extends Parser {
 
       ret
     }
-//    case AstCall(funName, params) =>
-//    case AstComma(first, second) =>
+    case AstCall(astFun, params) => {
+      val contextObject = curContext.get(astFun.name)
+      if (contextObject.isEmpty)
+        throw new RuntimeException(s"Function ${astFun.name} not found")
+
+      if (!contextObject.get.isInstanceOf[ContextFunction])
+        throw new RuntimeException(s"${astFun.name} is not Function")
+
+      val fun = contextObject.get.asInstanceOf[ContextFunction]
+
+      if (fun.params.size != params.size)
+        throw new RuntimeException(s"Incorrect parameters count for function ${astFun.name}")
+
+      val newContext = curContext.clone()
+      for (i <- params.indices) {
+        eval(params(i), curContext.clone()) match {
+          case AstInt(value) => newContext.put(fun.params(i), ContextVariable(value))
+          case AstDouble(value) => newContext.put(fun.params(i), ContextVariable(value))
+          case _ => throw new RuntimeException("Bad expression")
+        }
+      }
+      eval(fun.body, newContext)
+    }
+
+    case AstComma(expressions) => {
+      for (expr <- expressions.take(expressions.size - 1)) {
+        eval(expr, curContext)
+       }
+      eval(expressions.last, curContext)
+    }
+
+
     case ret @ AstFunction(id, params, body) => {
       if (curContext.contains(id.name))
         throw new RuntimeException(s"Identifier ${id.name} already exists")
@@ -145,7 +180,7 @@ class MyInterpreter extends Parser {
       if (curContext.contains(id.name))
         throw new RuntimeException(s"Identifier ${id.name} already exists")
 
-      eval(expr, mutable.Map() ++= curContext) match {
+      eval(expr, curContext.clone()) match {
         case AstInt(value) => curContext.put(id.name, ContextValue(value))
         case AstDouble(value) => curContext.put(id.name, ContextValue(value))
         case _ => throw new RuntimeException("Bad expression")
@@ -156,7 +191,7 @@ class MyInterpreter extends Parser {
       if (curContext.contains(id.name))
         throw new RuntimeException(s"Identifier ${id.name} already exists")
 
-      eval(expr, mutable.Map() ++= curContext) match {
+      eval(expr, curContext.clone()) match {
         case AstInt(value) => curContext.put(id.name, ContextVariable(value))
         case AstDouble(value) => curContext.put(id.name, ContextVariable(value))
         case _ => throw new RuntimeException("Bad expression")
@@ -171,6 +206,10 @@ class MyInterpreter extends Parser {
   }
 
   val context = new mutable.HashMap[String, ContextElement]
+}
+
+object MyInterpreter {
+  val IntMinValueStr = Int.MinValue.toString
 }
 
 sealed abstract class ContextElement

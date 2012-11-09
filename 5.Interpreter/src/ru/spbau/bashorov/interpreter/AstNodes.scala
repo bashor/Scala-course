@@ -1,5 +1,7 @@
 package ru.spbau.bashorov.interpreter
 
+import scala.List
+
 sealed abstract class AstNode
 
 case class AstInt(value: Int) extends AstNode
@@ -16,7 +18,7 @@ case class AstAssignment(id: AstIdentifier, value: AstNode) extends AstNode
 
 case class AstCall(funName: AstIdentifier, params: List[AstNode]) extends AstNode
 
-case class AstComma(first: AstNode, second: AstNode) extends AstNode
+case class AstComma(expressions: List[AstNode]) extends AstNode
 
 
 case class AstFunction(name: AstIdentifier, params: List[AstIdentifier], body: AstNode) extends AstNode

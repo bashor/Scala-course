@@ -128,7 +128,7 @@ class MyInterpreterEvalTests extends FunSuite {
     }
   }
 
-  test("left is simple and right is expression ") {
+  test("Left is simple and right is expression") {
     val interpreter = new MyInterpreter()
     interpreter.eval("val abcd = 5")
     val variable = interpreter.context.get("abcd")
@@ -138,4 +138,21 @@ class MyInterpreterEvalTests extends FunSuite {
     interpreter.eval("34+abcd") should equal(AstInt(34 + 5))
   }
 
+  test("Expression with whitespaces") {
+    new MyInterpreter().eval("2 + 2") should equal (new AstInt(4))
+  }
+
+  test("Function calling") {
+    val interpreter = new MyInterpreter()
+    interpreter.eval("def foo(x) = x")
+    interpreter.eval("foo(3)") should equal (AstInt(3))
+  }
+
+  test("Comma separated numbers") {
+    new MyInterpreter().eval("1.1, 2, 3.7") should equal (AstDouble(3.7))
+  }
+
+  test ("Comma separated expressions") {
+    new MyInterpreter().eval("val x = 5.6 + 9, def foo(x) = x+1, foo(x)") should equal (AstDouble(5.6 + 9 + 1))
+  }
 }
