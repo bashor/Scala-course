@@ -40,28 +40,44 @@ class MyInterpreterParseTests extends FunSuite {
   }
 
   test("MaxInt") {
-    new MyInterpreter().eval(Int.MaxValue.toString) should equal (new AstInt(Int.MaxValue))
+    new MyInterpreter().parse(Int.MaxValue.toString) should equal (new AstInt(Int.MaxValue))
   }
 
   test("MinInt") {
-    new MyInterpreter().eval(Int.MinValue.toString) should equal (new AstInt(Int.MinValue))
+    new MyInterpreter().parse(Int.MinValue.toString) should equal (new AstInt(Int.MinValue))
   }
 
   test("Big Int") {
     intercept[RuntimeException] {
-      new MyInterpreter().eval("123456789123456789")
+      new MyInterpreter().parse("123456789123456789")
     }
   }
 
   test("Max Double") {
-    new MyInterpreter().eval(Double.MaxValue.formatted("%f")) should equal (new AstDouble(Double.MaxValue))
+    new MyInterpreter().parse(Double.MaxValue.formatted("%f")) should equal (new AstDouble(Double.MaxValue))
   }
 
   test("Min Double") {
-    new MyInterpreter().eval(Double.MinValue.formatted("%f")) should equal (new AstDouble(Double.MinValue))
+    new MyInterpreter().parse(Double.MinValue.formatted("%f")) should equal (new AstDouble(Double.MinValue))
   }
 
   test("Big Double") {
-    new MyInterpreter().eval("1" + Double.MaxValue.formatted("%f")) should equal (new AstDouble(Double.PositiveInfinity))
+    new MyInterpreter().parse("1" + Double.MaxValue.formatted("%f")) should equal (new AstDouble(Double.PositiveInfinity))
+  }
+
+  test("Define function with default value") {
+    new MyInterpreter().parse("def foo(x, y = 1, z) = 1") should equal (AstFunction(AstIdentifier("foo"), List(AstIdentifier("x"), AstAssignment(AstIdentifier("y"), AstInt(1)), AstIdentifier("z")), false, AstInt(1)))
+  }
+
+  test("Define function with repeated param") {
+    new MyInterpreter().parse("def foo(x, z*) = 1") should equal (AstFunction(AstIdentifier("foo"), List(AstIdentifier("x"), AstIdentifier("z")), true, AstInt(1)))
+  }
+
+  test("Expression with many statement") {
+    new MyInterpreter().parse("def foo() = 1 , 2") should equal (AstFunction(AstIdentifier("foo"), List(), false, AstComma(List(AstInt(1), AstInt(2)))))
+  }
+
+  test("Parse for") {
+    new MyInterpreter().parse("for(i : z) i") should equal (AstFor(AstIdentifier("i"), AstIdentifier("z"), AstIdentifier("i")))
   }
 }

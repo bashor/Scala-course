@@ -1,6 +1,7 @@
 package ru.spbau.bashorov.interpreter
 
-import scala.List
+import collection.mutable
+import org.parboiled.errors.ParsingException
 
 sealed abstract class AstNode
 
@@ -20,9 +21,10 @@ case class AstCall(funName: AstIdentifier, params: List[AstNode]) extends AstNod
 
 case class AstComma(expressions: List[AstNode]) extends AstNode
 
-
-case class AstFunction(name: AstIdentifier, params: List[AstIdentifier], body: AstNode) extends AstNode
+case class AstFunction(name: AstIdentifier, params: List[AstNode], lastIsRepeated: Boolean, body: AstNode) extends AstNode
 
 case class AstValue(name: AstIdentifier, expr: AstNode) extends AstNode
 
 case class AstVariable(name: AstIdentifier, expr: AstNode) extends AstNode
+
+case class AstFor(it: AstIdentifier, collection: AstIdentifier, body: AstNode) extends  AstNode

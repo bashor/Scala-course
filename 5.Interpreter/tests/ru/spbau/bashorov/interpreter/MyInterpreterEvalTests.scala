@@ -5,7 +5,6 @@ import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
 import org.scalatest.matchers.ShouldMatchers._
 
-
 @RunWith(classOf[JUnitRunner])
 class MyInterpreterEvalTests extends FunSuite {
   test("Int + Int") {
@@ -152,7 +151,70 @@ class MyInterpreterEvalTests extends FunSuite {
     new MyInterpreter().eval("1.1, 2, 3.7") should equal (AstDouble(3.7))
   }
 
-  test ("Comma separated expressions") {
-    new MyInterpreter().eval("val x = 5.6 + 9, def foo(x) = x+1, foo(x)") should equal (AstDouble(5.6 + 9 + 1))
+  test("Call function with named parameter") {
+    val interpreter = new MyInterpreter()
+    interpreter.eval("def foo(x, z) = x + z")
+    interpreter.eval("foo(z = 1, 1) ") should equal (AstInt(2))
   }
+
+  test("Expression with function call") {
+    val interpreter = new MyInterpreter()
+    interpreter.eval("def foo() = 1 ")
+    interpreter.eval(" 1 + foo()") should equal (AstInt(2))
+  }
+
+  test("Define function with same params") {
+    intercept[RuntimeException] {
+      new MyInterpreter().eval("def foo(x, x) = 1")
+    }
+  }
+
+  test("Double initialization for named parameter") {
+    intercept[RuntimeException] {
+      val interpreter = new MyInterpreter()
+      interpreter.eval("def foo(x, z) = x + z")
+      interpreter.eval(" foo(z = 1, z = 1, 1) ")
+    }
+  }
+
+  test("Incorrect parameter count") {
+    intercept[RuntimeException] {
+      val interpreter = new MyInterpreter()
+      interpreter.eval("def foo(x, z) = x + z")
+      interpreter.eval(" foo(z = 1) ")
+    }
+  }
+
+  test("Call function with few params") {
+    val interpreter =  new MyInterpreter()
+    interpreter.eval("def foo(x, y, z) = x + y + z ")
+    interpreter.eval(" foo(1, 2, 3.3)") should equal (AstDouble(1 + 2 + 3.3))
+  }
+
+  test("Call function with excess param") {
+    intercept[RuntimeException] {
+      val interpreter = new MyInterpreter()
+      interpreter.eval("def foo(x, y, z) = x + y + z ")
+      interpreter.eval(" foo(1, 2, 3.3, 4)")
+    }
+  }
+
+  test("Call function with default param and named param and seq param") {
+    val interpreter = new MyInterpreter()
+    interpreter.eval("def foo(x, y = 2.2, z) = x + y + z ")
+    interpreter.eval(" foo(z=3.3, 1.3)") should equal (AstDouble(1.3 + 2.2 + 3.3))
+  }
+
+  test("Call function with named vararg param") {
+    val interpreter = new MyInterpreter()
+    interpreter.eval("def foo(x, y = 2.2, z*) = x + y")
+    interpreter.eval(" foo(z=3.3, z = 3, 1.3)") should equal (AstDouble(1.3 + 2.2))
+  }
+
+  test("for") {
+    val interpreter = new MyInterpreter()
+    interpreter.eval("def foo(z*) = var acc = 0, for (i : z) acc = acc + i, acc")
+    interpreter.eval("foo(1, 2, 3)") should equal (AstInt(1 + 2 + 3))
+  }
+
 }
