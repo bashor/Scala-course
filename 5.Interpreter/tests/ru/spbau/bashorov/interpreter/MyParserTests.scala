@@ -80,4 +80,8 @@ class MyParserTests extends FunSuite {
   test("Parse for") {
     new MyParser().parse("for(i : z) i") should equal (AstFor(AstIdentifier("i"), AstIdentifier("z"), AstIdentifier("i")))
   }
+
+  test("Function call without spaces") {
+    new MyParser().parse("f(1,2,3)") should equal (AstCall(AstIdentifier("f"), List(AstInt(1), AstInt(2), AstInt(3))))
+  }
 }

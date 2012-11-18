@@ -44,7 +44,7 @@ class MyParser extends Parser {
   def Identifier = rule { WhiteSpace ~ (IdentifierStart ~ zeroOrMore(IdentifierStart | Digits)) ~> AstIdentifier ~ WhiteSpace}
 
   def Assignment = rule { Identifier ~ "=" ~ Expression ~~> ((id: AstIdentifier, value: AstNode) => AstAssignment(id, value)) }
-  def FunCall = rule { Identifier ~ "(" ~ zeroOrMore((Assignment | Expression), separator = ", ") ~ ")" ~~>
+  def FunCall = rule { Identifier ~ "(" ~ zeroOrMore((Assignment | Expression), separator = ",") ~ ")" ~~>
     ((funName: AstIdentifier, params: List[AstNode]) => AstCall(funName, params)) }
 
   def Value = rule { "val" ~ Identifier ~ "=" ~ Expression ~~> ((name: AstIdentifier, expr: AstNode) => AstValue(name, expr))}

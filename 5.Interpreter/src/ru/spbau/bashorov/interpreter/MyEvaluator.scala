@@ -101,7 +101,8 @@ class MyEvaluator extends AstNodeVisitor {
     for (arg <- varargs.args) {
       result = node.body.visit(this, result._2 ++ (node.it.name, arg))
     }
-    result
+
+    (result._1, (result._2 -- node.it.name))
   }
 
   def visited(node: AstFunction, context: Context) = {
@@ -211,7 +212,7 @@ class MyEvaluator extends AstNodeVisitor {
     if (fun.params.size != initedParams.size)
       throw new RuntimeException(s"Incorrect parameters count for function ${node.funId.name}")
 
-    eval(fun.body, context ++ newContext.toMap)
+    (eval(fun.body, context ++ newContext.toMap)._1, context)
   }
 
   private def processNum[R](node: AstNode, process: (AstNode) => R) = node match {

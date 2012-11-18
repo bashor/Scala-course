@@ -17,4 +17,10 @@ class Context(private val map: Map[String, AstNode] = Map()) {
     newMap += newElement
     new Context(newMap.toMap)
   }
+
+  def -- (key: String) = {
+    val newMap = mutable.HashMap(map.toSeq: _*)
+    newMap.remove(key)
+    new Context(newMap.toMap)
+  }
 }

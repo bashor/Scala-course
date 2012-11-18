@@ -218,4 +218,18 @@ class MyEvaluatorTests extends FunSuite {
     evaluator.eval("foo(1, 2, 3)", context)._1 should equal (AstInt(1 + 2 + 3))
   }
 
+  test("Call function many times") {
+    val evaluator = new MyEvaluator()
+    val context = evaluator.eval("def foo(z*) = var acc = 0, for (i : z) acc = acc + i, acc")._2
+    val (result, context2) = evaluator.eval("foo(1, 2, 3)", context)
+    result should equal (AstInt(1 + 2 + 3))
+    evaluator.eval("foo(z=1, z=2, 3)", context2)._1 should equal (AstInt(1 + 2 + 3))
+  }
+
+  test("Use variable name after used it in For loop") {
+    val evaluator = new MyEvaluator()
+    val context = evaluator.eval("def foo(z*) = var acc = 0, for (i : z) acc = acc + i, val i = acc, i")._2
+    evaluator.eval("foo(z=1,z=2,3)", context)._1 should equal (AstInt(1 + 2 + 3))
+  }
+
 }

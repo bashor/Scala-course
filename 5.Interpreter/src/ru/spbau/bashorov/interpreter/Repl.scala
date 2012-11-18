@@ -17,6 +17,7 @@ object Repl {
         case ":reset" => {
           context = new Context()
         }
+        case "" =>
         case input => {
           try {
             val result = evaluator.eval(input, context)
