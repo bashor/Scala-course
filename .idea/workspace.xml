@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" name="Default" comment="">
+    <list default="true" id="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" name="Default" comment="workspace changes">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodeVisitor.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyEvaluatorTests.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyParserTests.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterEvalTests.scala" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterParseTests.scala" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyInterpreter.scala" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyParser.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/5.Interpreter.iml" afterPath="$PROJECT_DIR$/5.Interpreter/5.Interpreter.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scala-course.iml" afterPath="$PROJECT_DIR$/Scala-course.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Scala-course.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353178243333" ignored="false" />
-    <file path="/Repl.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352644727702" ignored="false" />
-    <file path="/fragment.java" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352643769623" ignored="false" />
-    <file path="/Scala Console" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352045382414" ignored="false" />
-    <file path="/Grammar.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352045700531" ignored="false" />
-    <file path="/ssss.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352092791925" ignored="false" />
-    <file path="/MyInterpreterTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352093323295" ignored="false" />
-    <file path="$USER_HOME$/.IdeaIC12/config/plugins/Kotlin/lib/kotlin-plugin.jar!/jet/Unit.jet" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352571321175" ignored="false" />
-    <file path="/a.dummy" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352590540576" ignored="false" />
-    <file path="/AstNodes.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352604100476" ignored="false" />
-    <file path="/MyInterpreterParseTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352606155367" ignored="false" />
-    <file path="/MyInterpreterEvalTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352606550390" ignored="false" />
+    <file path="/MyEvaluator.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353202440356" ignored="false" />
+    <file path="/AstNodes.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353196293468" ignored="false" />
+    <file path="/MyInterpreterEvalTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353195650958" ignored="false" />
+    <file path="/a.dummy" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353189607486" ignored="false" />
+    <file path="/Context.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353189435851" ignored="false" />
+    <file path="/AstNodeVisitor.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353186055377" ignored="false" />
+    <file path="/Dummy.txt" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353182547154" ignored="false" />
     <file path="/MyInterpreter.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352640330266" ignored="false" />
+    <file path="/MyInterpreterParseTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352606155367" ignored="false" />
+    <file path="$USER_HOME$/.IdeaIC12/config/plugins/Kotlin/lib/kotlin-plugin.jar!/jet/Unit.jet" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352571321175" ignored="false" />
+    <file path="/MyInterpreterTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352093323295" ignored="false" />
+    <file path="/ssss.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352092791925" ignored="false" />
+    <file path="/Grammar.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352045700531" ignored="false" />
+    <file path="/Scala Console" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352045382414" ignored="false" />
+    <file path="/fragment.java" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352643769623" ignored="false" />
+    <file path="/Repl.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352644727702" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +51,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -70,7 +86,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -81,7 +96,46 @@
     <favorites_list name="Current task" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="AstNodes.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="0" selection-start="986" selection-end="986" vertical-scroll-proportion="-88.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyEvaluator.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="214" column="50" selection-start="8434" selection-end="8434" vertical-scroll-proportion="0.47916666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyEvaluatorTests.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyEvaluatorTests.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="214" column="2" selection-start="6412" selection-end="6412" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#39#70#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Context.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="57" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -100,20 +154,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/5.Interpreter/src/Grammar.scala" />
-        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Grammar.scala" />
-        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/BashorovInterpreter.scala" />
-        <option value="$PROJECT_DIR$/5.Interpreter/tests/MyInterpreterTests.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyInterpreterTests.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/MyInterpreterTests.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/Repl.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterTests.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/ssss.scala" />
-        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala" />
-        <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterParseTests.scala" />
-        <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterEvalTests.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyInterpreter.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluater.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyParser.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodeVisitor.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterEvalTests.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterParseTests.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyEvaluatorTests.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala" />
       </list>
     </option>
   </component>
@@ -149,7 +205,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -229,6 +284,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,13 +302,13 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -261,40 +317,6 @@
     </key>
   </component>
   <component name="RunManager" selected="ScalaTest.All Tests">
-    <configuration default="false" name="MyInterpreterEvalTests" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="5.Interpreter" />
-      <setting name="path" value="ru.spbau.bashorov.interpreter.MyInterpreterEvalTests" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="MyInterpreterParseTests" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="5.Interpreter" />
-      <setting name="path" value="ru.spbau.bashorov.interpreter.MyInterpreterParseTests" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="ru.spbau.bashorov.interpreter.Test" />
@@ -424,12 +446,10 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="ScalaTest.All Tests" />
-      <item index="1" class="java.lang.String" itemvalue="ScalaTest.MyInterpreterEvalTests" />
-      <item index="2" class="java.lang.String" itemvalue="ScalaTest.MyInterpreterParseTests" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Test" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Repl" />
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Repl" />
+      <item index="2" class="java.lang.String" itemvalue="ScalaTest.All Tests" />
     </list>
     <recent_temporary>
       <list size="2">
@@ -443,6 +463,24 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" name="Default" comment="" />
@@ -518,29 +556,29 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1615" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937106" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39892474" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3539267" sideWeight="0.50535715" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16188656" sideWeight="0.6467505" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3532495" sideWeight="0.4904762" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1612492" sideWeight="0.6473118" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35268816" sideWeight="0.4904762" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914045" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Kotlin" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="ASM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914045" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6701571" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -582,7 +620,7 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added &quot;for&quot; loop for VarArg&#10;added default value for function&#10;added named parameters&#10;added repeated parameter&#10;added a few tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace changes" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -606,6 +644,7 @@
     <MESSAGE value="add ignore whitespaces&#10;fix comma separated expressions&#10;processing big numbers&#10;" />
     <MESSAGE value="pretty print for numbers" />
     <MESSAGE value="added &quot;for&quot; loop for VarArg&#10;added default value for function&#10;added named parameters&#10;added repeated parameter&#10;added a few tests" />
+    <MESSAGE value="workspace changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -619,70 +658,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterParseTests.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="4" selection-start="2578" selection-end="2578" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/parboiled-scala_2.10-1.1.1-sources.jar!/org/parboiled/scala/Parser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="6" selection-start="3999" selection-end="3999" vertical-scroll-proportion="0.33211008" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/parboiled-scala_2.10-1.1.1-sources.jar!/org/parboiled/scala/rules/Rule0.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="21" selection-start="3354" selection-end="3360" vertical-scroll-proportion="0.7715736" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/parboiled-core-1.1.1-sources.jar!/org/parboiled/MatcherContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="348" column="0" selection-start="13228" selection-end="13228" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/scalatest_2.10.0-M7-2.0.M4-2.10.0-M7-B1-sources.jar!/org/scalatest/Assertions.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="720" column="0" selection-start="32052" selection-end="32052" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0-M7-sources.jar!/scala/reflect/base/TypeTags.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="15" selection-start="9866" selection-end="9873" vertical-scroll-proportion="0.2951096" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0-M7-sources.jar!/scala/reflect/ClassTag.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="6" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.2951096" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0-M7-sources.jar!/scala/Predef.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="41" selection-start="5391" selection-end="5399" vertical-scroll-proportion="0.25956738" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/scala-library-src.jar!/scala/collection/mutable/MutableList.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="12" selection-start="4412" selection-end="4412" vertical-scroll-proportion="3.3729641" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0-M7-sources.jar!/scala/collection/generic/GenericCompanion.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="6" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.6368078" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyInterpreter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="274" column="86" selection-start="12078" selection-end="12078" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="38" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="21" column="38" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0-M7-sources1.jar!/scala/collection/mutable/MapLike.scala">
@@ -690,23 +673,99 @@
         <state line="149" column="6" selection-start="5926" selection-end="5926" vertical-scroll-proportion="0.01674107" />
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/parboiled-scala_2.10-1.1.1-sources.jar!/org/parboiled/scala/Parser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="964" selection-end="964" vertical-scroll-proportion="0.06622516">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/scala-library-src.jar!/scala/collection/generic/GenMapFactory.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="6" selection-start="1832" selection-end="1837" vertical-scroll-proportion="0.5099099">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0-M7-sources.jar!/scala/collection/TraversableOnce.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="262" column="49" selection-start="8828" selection-end="8828" vertical-scroll-proportion="0.35855857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0-M7-sources1.jar!/scala/collection/LinearSeqOptimized.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="6" selection-start="3509" selection-end="3513" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyParser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="10" selection-start="138" selection-end="138" vertical-scroll-proportion="0.13020833">
+          <folding>
+            <element signature="e#39#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodeVisitor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="1" selection-start="890" selection-end="890" vertical-scroll-proportion="0.390625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/scalatest_2.10.0-M7-2.0.M4-2.10.0-M7-B1-sources.jar!/org/scalatest/Engine.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="230" column="0" selection-start="9839" selection-end="9839" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="95" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.48549107">
+        <state line="27" column="0" selection-start="986" selection-end="986" vertical-scroll-proportion="-88.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterEvalTests.scala">
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyParserTests.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="15" selection-start="6026" selection-end="6026" vertical-scroll-proportion="0.71540177">
+        <state line="10" column="14" selection-start="279" selection-end="279" vertical-scroll-proportion="0.26642984">
+          <folding>
+            <element signature="e#39#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyEvaluatorTests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="214" column="2" selection-start="6412" selection-end="6412" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#39#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="57" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterParseTests.scala">
+    <entry file="jar://$PROJECT_DIR$/lib/scala-library-src.jar!/scala/Predef.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="4" selection-start="2578" selection-end="2578" vertical-scroll-proportion="0.7961495">
+        <state line="271" column="16" selection-start="12933" selection-end="12933" vertical-scroll-proportion="0.3321492">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="214" column="50" selection-start="8434" selection-end="8434" vertical-scroll-proportion="0.47916666">
           <folding />
         </state>
       </provider>
@@ -764,7 +823,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>5.Interpreter</last-edited>
+          <last-edited>Scala-course</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
