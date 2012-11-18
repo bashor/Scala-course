@@ -5,18 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Scala-course.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="/Repl.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353204432786" ignored="false" />
+    <file path="/Context.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353204358671" ignored="false" />
+    <file path="/a.dummy" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353204212186" ignored="false" />
+    <file path="/Dummy.txt" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353204114505" ignored="false" />
     <file path="/MyParserTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353203943613" ignored="false" />
     <file path="/MyEvaluator.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353203882159" ignored="false" />
-    <file path="/Dummy.txt" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353202747482" ignored="false" />
     <file path="/AstNodes.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353196293468" ignored="false" />
     <file path="/MyInterpreterEvalTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353195650958" ignored="false" />
-    <file path="/a.dummy" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353189607486" ignored="false" />
-    <file path="/Context.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353189435851" ignored="false" />
     <file path="/AstNodeVisitor.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353186055377" ignored="false" />
     <file path="/MyInterpreter.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352640330266" ignored="false" />
     <file path="/MyInterpreterParseTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352606155367" ignored="false" />
@@ -26,7 +28,6 @@
     <file path="/Grammar.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352045700531" ignored="false" />
     <file path="/Scala Console" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352045382414" ignored="false" />
     <file path="/fragment.java" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352643769623" ignored="false" />
-    <file path="/Repl.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1352644727702" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +90,26 @@
     <favorites_list name="Current task" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Repl.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="31" selection-start="746" selection-end="746" vertical-scroll-proportion="0.44800884">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Context.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="58" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -113,7 +133,6 @@
         <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterTests.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/ssss.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyInterpreter.scala" />
-        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluater.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyParser.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodeVisitor.scala" />
@@ -121,9 +140,10 @@
         <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterParseTests.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyEvaluatorTests.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala" />
-        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyParserTests.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala" />
       </list>
     </option>
   </component>
@@ -526,8 +546,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1612492" sideWeight="0.6" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1612492" sideWeight="0.6" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35268816" sideWeight="0.4904762" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -574,7 +594,7 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="big refactoring&#10;extract Evaluator&#10;using Visitor pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix exception messages" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -600,6 +620,7 @@
     <MESSAGE value="added &quot;for&quot; loop for VarArg&#10;added default value for function&#10;added named parameters&#10;added repeated parameter&#10;added a few tests" />
     <MESSAGE value="workspace changes" />
     <MESSAGE value="big refactoring&#10;extract Evaluator&#10;using Visitor pattern" />
+    <MESSAGE value="fix exception messages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -613,11 +634,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="38" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0-M7-sources1.jar!/scala/collection/mutable/MapLike.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="149" column="6" selection-start="5926" selection-end="5926" vertical-scroll-proportion="0.01674107" />
@@ -679,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="159" selection-end="159" vertical-scroll-proportion="0.16917293">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyParser.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="10" selection-start="138" selection-end="138" vertical-scroll-proportion="0.14097744">
@@ -724,6 +733,20 @@
           <folding>
             <element signature="e#39#70#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="58" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="31" selection-start="746" selection-end="746" vertical-scroll-proportion="0.44800884">
+          <folding />
         </state>
       </provider>
     </entry>

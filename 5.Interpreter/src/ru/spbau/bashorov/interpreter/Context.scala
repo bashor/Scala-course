@@ -2,7 +2,7 @@ package ru.spbau.bashorov.interpreter
 
 import collection.mutable
 
-class Context(private val map: Map[String, AstNode]) {
+class Context(private val map: Map[String, AstNode] = Map()) {
   def get(key: String) = map.get(key)
 
   def contains(key: String) = map.contains(key)

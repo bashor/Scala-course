@@ -2,11 +2,12 @@ package ru.spbau.bashorov.interpreter
 
 object Repl {
   def main(args: Array[String]) {
-    var myInterpreter = new MyInterpreter
+    val evaluator = new MyEvaluator()
+    var context = new Context()
     while (true) {
       readLine() match {
         case null => {
-          println("bedabeda")
+          println("null")
           return
         }
         case ":exit" => {
@@ -14,16 +15,17 @@ object Repl {
           return
         }
         case ":reset" => {
-          myInterpreter = new MyInterpreter
+          context = new Context()
         }
         case input => {
           try {
-            val result = myInterpreter.eval(input)
-            result match {
+            val result = evaluator.eval(input, context)
+            result._1 match {
               case AstInt(value) => println(value)
               case AstDouble(value) => println(value)
               case _ => println(result)
             }
+            context = result._2
           } catch {
             case e: RuntimeException => System.err.println(e.getMessage)
           }
