@@ -1,5 +1,7 @@
 package ru.spbau.bashorov.interpreter
 
+import org.parboiled.errors.ParserRuntimeException
+
 object Repl {
   def main(args: Array[String]) {
     val evaluator = new MyEvaluator()
@@ -28,6 +30,7 @@ object Repl {
             }
             context = result._2
           } catch {
+            case e: ParserRuntimeException => System.err.println(e.getCause.getMessage)
             case e: RuntimeException => System.err.println(e.getMessage)
           }
         }

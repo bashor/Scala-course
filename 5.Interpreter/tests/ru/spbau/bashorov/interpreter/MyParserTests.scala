@@ -5,7 +5,7 @@ import org.scalatest.junit.JUnitRunner
 import org.scalatest.FunSuite
 import org.scalatest.matchers.ShouldMatchers._
 
-import org.parboiled.errors.ParsingException
+import org.parboiled.errors.{ParserRuntimeException, ParsingException}
 
 @RunWith(classOf[JUnitRunner])
 class MyParserTests extends FunSuite {
@@ -48,7 +48,7 @@ class MyParserTests extends FunSuite {
   }
 
   test("Big Int") {
-    intercept[RuntimeException] {
+    intercept[ParserRuntimeException] {
       new MyParser().parse("123456789123456789")
     }
   }

@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyEvaluatorTests.scala" afterPath="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyEvaluatorTests.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyParser.scala" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyParser.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyParserTests.scala" afterPath="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyParserTests.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala" afterPath="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala" />
@@ -15,13 +12,14 @@
     </list>
     <ignored path="Scala-course.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="/MyParser.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353210747641" ignored="false" />
+    <file path="/Repl.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353210658677" ignored="false" />
+    <file path="/Dummy.txt" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353207505492" ignored="false" />
     <file path="/MyEvaluatorTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353207430437" ignored="false" />
     <file path="/Context.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353207275334" ignored="false" />
     <file path="/MyEvaluator.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353207137506" ignored="false" />
-    <file path="/Repl.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353206205470" ignored="false" />
     <file path="/MyParserTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353205897083" ignored="false" />
     <file path="/fragment.java" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353204895854" ignored="false" />
-    <file path="/Dummy.txt" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353204596822" ignored="false" />
     <file path="/a.dummy" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353204212186" ignored="false" />
     <file path="/AstNodes.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353196293468" ignored="false" />
     <file path="/MyInterpreterEvalTests.scala" changelist="53488ed9-2a0a-43d1-a914-f9ad18bbf9de" time="1353195650958" ignored="false" />
@@ -99,16 +97,16 @@
       <file leaf-file-name="Repl.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="19" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
+            <state line="33" column="0" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyEvaluator.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MyEvaluator.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="29" selection-start="4510" selection-end="4510" vertical-scroll-proportion="0.0">
+            <state line="169" column="40" selection-start="6971" selection-end="6971" vertical-scroll-proportion="4.4010415">
               <folding />
             </state>
           </provider>
@@ -132,10 +130,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyEvaluatorTests.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MyEvaluatorTests.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyEvaluatorTests.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="228" column="40" selection-start="7061" selection-end="7061" vertical-scroll-proportion="0.765625">
+            <state line="0" column="62" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#39#70#0" expanded="true" />
               </folding>
@@ -146,7 +144,7 @@
       <file leaf-file-name="MyParser.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyParser.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="8" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+            <state line="14" column="0" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#39#67#0" expanded="true" />
               </folding>
@@ -157,7 +155,7 @@
       <file leaf-file-name="MyParserTests.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyParserTests.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="75" selection-start="2908" selection-end="2908" vertical-scroll-proportion="0.0">
+            <state line="53" column="87" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#39#70#0" expanded="true" />
               </folding>
@@ -194,12 +192,12 @@
         <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterEvalTests.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyInterpreterParseTests.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala" />
-        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyParser.scala" />
-        <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyParserTests.scala" />
-        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Context.scala" />
         <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyEvaluatorTests.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyParserTests.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala" />
+        <option value="$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyParser.scala" />
       </list>
     </option>
   </component>
@@ -355,7 +353,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="ScalaTest.All Tests">
+  <component name="RunManager" selected="Application.Repl">
     <configuration default="false" name="Repl" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="ru.spbau.bashorov.interpreter.Repl" />
@@ -646,7 +644,7 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some context problems&#10;fix Function call parser" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -675,6 +673,7 @@
     <MESSAGE value="fix exception messages" />
     <MESSAGE value="fix Repl" />
     <MESSAGE value="minor" />
+    <MESSAGE value="fix some context problems&#10;fix Function call parser" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -688,53 +687,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0-M7-sources1.jar!/scala/collection/mutable/MapLike.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="6" selection-start="5926" selection-end="5926" vertical-scroll-proportion="0.01674107" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/parboiled-scala_2.10-1.1.1-sources.jar!/org/parboiled/scala/Parser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="964" selection-end="964" vertical-scroll-proportion="0.06622516">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/scala-library-src.jar!/scala/collection/generic/GenMapFactory.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="6" selection-start="1832" selection-end="1837" vertical-scroll-proportion="0.5099099">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0-M7-sources.jar!/scala/collection/TraversableOnce.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="262" column="49" selection-start="8828" selection-end="8828" vertical-scroll-proportion="0.35855857">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/scala-library-2.10.0-M7-sources1.jar!/scala/collection/LinearSeqOptimized.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="6" selection-start="3509" selection-end="3513" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodeVisitor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="1" selection-start="890" selection-end="890" vertical-scroll-proportion="0.390625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/scalatest_2.10.0-M7-2.0.M4-2.10.0-M7-B1-sources.jar!/org/scalatest/Engine.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="0" selection-start="9839" selection-end="9839" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/scala-library-src.jar!/scala/Predef.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="271" column="16" selection-start="12933" selection-end="12933" vertical-scroll-proportion="0.3321492">
@@ -749,35 +701,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyParserTests.scala">
+    <entry file="jar://$PROJECT_DIR$/lib/parboiled-core-1.1.1-sources.jar!/org/parboiled/common/Preconditions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="75" selection-start="2908" selection-end="2908" vertical-scroll-proportion="0.0">
+        <state line="205" column="24" selection-start="9137" selection-end="9137" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/parboiled-core-1.1.1-sources.jar!/org/parboiled/errors/InvalidInputError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="13" selection-start="950" selection-end="950" vertical-scroll-proportion="0.27027026">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/parboiled-core-1.1.1-sources.jar!/org/parboiled/errors/ErrorUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="76" selection-start="3653" selection-end="3653" vertical-scroll-proportion="0.7567568">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/parboiled-core-1.1.1-sources.jar!/org/parboiled/errors/ParserRuntimeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="13" selection-start="763" selection-end="785" vertical-scroll-proportion="0.1891892">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/parboiled-core-1.1.1-sources.jar!/org/parboiled/errors/ParsingException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.44270834">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyEvaluatorTests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="62" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#39#70#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="19" selection-start="460" selection-end="460" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyParser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="8" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#39#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,19 +752,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala">
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/AstNodes.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="29" selection-start="4510" selection-end="4510" vertical-scroll-proportion="0.0">
+        <state line="35" column="0" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyEvaluatorTests.scala">
+    <entry file="jar://$PROJECT_DIR$/lib/parboiled-core-1.1.1-sources.jar!/org/parboiled/MatcherContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="40" selection-start="7061" selection-end="7061" vertical-scroll-proportion="0.765625">
+        <state line="352" column="34" selection-start="13457" selection-end="13457" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/tests/ru/spbau/bashorov/interpreter/MyParserTests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="87" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#39#70#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/parboiled-core-1.1.1-sources.jar!/org/parboiled/matchers/Matcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="17" selection-start="3183" selection-end="3184" vertical-scroll-proportion="0.84375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyParser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#39#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/Repl.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="938" selection-end="938" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Interpreter/src/ru/spbau/bashorov/interpreter/MyEvaluator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="40" selection-start="6971" selection-end="6971" vertical-scroll-proportion="4.4010415">
+          <folding />
         </state>
       </provider>
     </entry>

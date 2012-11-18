@@ -12,7 +12,7 @@ class MyParser extends Parser {
       try {
         s.toInt
       } catch {
-        case e: NumberFormatException => throw new RuntimeException(s"Too big number $s")
+        case e: NumberFormatException => throw new ParsingException(s"Wrong number format: $s")
       })) ~ WhiteSpace }
   def DoubleNum = rule { WhiteSpace ~ (optional("-") ~ DoubleStr) ~> ((s: String) => new AstDouble(s.toDouble)) ~ WhiteSpace }
 
@@ -74,7 +74,7 @@ class MyParser extends Parser {
 
     parsingResult.result match {
       case Some(i) => i
-      case None => throw new ParsingException("Invalid expression:\n" + ErrorUtils.printParseErrors(parsingResult))
+      case None => throw new ParsingException(ErrorUtils.printParseErrors(parsingResult))
     }
   }
 }
