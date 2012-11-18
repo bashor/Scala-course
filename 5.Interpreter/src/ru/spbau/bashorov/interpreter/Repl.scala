@@ -7,7 +7,7 @@ object Repl {
     while (true) {
       readLine() match {
         case null => {
-          println("null")
+          println("Unexpected null.")
           return
         }
         case ":exit" => {
