@@ -111,7 +111,7 @@ class MyEvaluator extends AstNodeVisitor {
     val funParams = node.params.map(_ match {
       case id @ AstIdentifier(_) => id
       case AstAssignment(id, expr) => processNum(expr.visit(this, context)._1, AstAssignment(id, _))
-      case _ => throw new RuntimeException("todo") //todo
+      case param => throw new RuntimeException(s"Unexpected node in function params: $param")
     })
 
     for (i <- funParams.indices) {
@@ -124,17 +124,17 @@ class MyEvaluator extends AstNodeVisitor {
     (node, newContext)
   }
 
-  def visited(node: AstCall, context: Context) = { (node, context)
+  def visited(node: AstCall, context: Context) = {
     def extractName(node: AstNode) = node match {
       case id @ AstIdentifier(_) => id.name
       case AstAssignment(id, _) =>  id.name
-      case _ => throw new RuntimeException("todo") //todo
+      case _ => throw new RuntimeException(s"Unexpected node in function params: $node")
     }
 
     def extractValue(node: AstNode) = node match {
       case id @ AstIdentifier(_) => None
       case AstAssignment(id, value) =>  Some(value)
-      case _ => throw new RuntimeException("todo") //todo
+      case _ => throw new RuntimeException(s"Unexpected node in function params: $node")
     }
 
     val contextObject = context.get(node.funId.name)
@@ -160,13 +160,13 @@ class MyEvaluator extends AstNodeVisitor {
       }
     }
 
-    // init alll named parameters
+    // init all named parameters
     for (i <- node.params.indices) {
       node.params(i) match {
         case AstAssignment(AstIdentifier(name), expr) => {
           val param = fun.params.find(((node: AstNode) => extractName(node) == name))
           if (param.isEmpty)
-            throw new RuntimeException("Bad expression") //todo
+            throw new RuntimeException(s"Parameter $name not found in function ${fun.id.name}")
 
           if (name != repeatedParam && initedParams.contains(name))
             throw new RuntimeException(s"Double initialization for parameter $name when calling ${node.funId.name}")
@@ -177,7 +177,7 @@ class MyEvaluator extends AstNodeVisitor {
       }
     }
 
-    // init another paramters
+    // init another parameters
     var j = 0
     for {param <- ((node.params).withFilter {
       case AstAssignment(_,_) => false
